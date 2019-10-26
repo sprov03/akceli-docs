@@ -72,7 +72,7 @@ php artisan akceli
 ![An image](/images/show-cars-controller-not-hooked-up.png)
 * So jump to the web.php file and register the controller, and add the following line
 ![An image](/images/added-cars-to-webphp.png)
-* if you want Akceli to register this for you form now, just add the inline template that the Akceli command warned bout bing missing.
+* if you want Akceli to register this for you form now, just add the inline template that the Akceli command warned about bing missing.
 ![An image](/images/show-adding-the-inline-controller-template.png)
 
 ## Run the Cars Controller Tests: 2
