@@ -11,8 +11,10 @@ module.exports = {
       '/guide/': [
         ['', 'Intro'],
         ['installation', 'Installation'],
-        ['getting-started', 'Walk Through']
-      ]
+        ['walk-through', 'Walk Through'],
+        ['config-doc', 'Configuration'],
+        ['generator-doc', 'Generators']
+      ],
     }
   }
 };
