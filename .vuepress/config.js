@@ -16,5 +16,14 @@ module.exports = {
         ['generator-doc', 'Generators']
       ],
     }
-  }
+  },
+  head: [
+    ['script', {async: null ,src: "https://www.googletagmanager.com/gtag/js?id=UA-151006134-2"}],
+    ['script', {}, `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-151006134-2');
+    `]
+  ],
 };
