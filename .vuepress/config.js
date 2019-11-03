@@ -11,9 +11,10 @@ module.exports = {
       '/guide/': [
         ['', 'Intro'],
         ['installation', 'Installation'],
-        ['walk-through', 'Walk Through'],
         ['config-doc', 'Configuration'],
-        ['generator-doc', 'Generators']
+        ['generator-doc', 'Generators'],
+        ['template-doc', 'Templates'],
+        ['walk-through', 'Walk Through'],
       ],
     }
   },
