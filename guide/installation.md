@@ -22,7 +22,7 @@ You will need to purchase an Akceli Licence if you have not already done so.
     "repositories": {
         "private-packagist": {
             "type": "composer",
-            "url": "https://akceli.repo.packagist.com/{your-repository-name-goes-here}/"
+            "url": "{Your Repository}"
         }
     }
 ```
@@ -49,7 +49,7 @@ composer config --auth http-basic.akceli.repo.packagist.com token {Your Access T
 I Chipper CI for all of my laravel projects.  To authorize Akceli with Chipper CI, simply add akceli to the packages for your project.
 [https://chipperci.com/](https://chipperci.com/)
 
-* Repository Url: akceli.repo.packagist.com
+* Repository Url: {Your Repository}
 * UserName: token  <--- Your user name is 'token'
 * passowrd: {Your Access Token}
 
