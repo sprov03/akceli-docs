@@ -16,18 +16,6 @@ You will need to purchase an Akceli Licence if you have not already done so.
 [https://akceli.io](https://akceli.io)
 :::
 
-Provide the auth credentials to your project. Run the following command in your project directory.
-
-```sh
-composer config --auth http-basic.packages.akceli.io {Your Email} {Your Password}
-```
-
-To prevent you private data from showing up in git hub dont forget to add the following to your `.gitignore`
-```.gitignore
-auth.json
-```
-
-
 Add the following to your `composer.json` to register the akceli repository
 ``` json  composer.json
     "repositories": [
@@ -38,7 +26,7 @@ Add the following to your `composer.json` to register the akceli repository
     ]
 ```
 
-finally require the package into your project
+require the package into your project: You will be prompted for username and password to authorize with the repository.
 
 ``` sh
 composer require akceli/laravel-code-generator
@@ -50,9 +38,6 @@ php artisan akceli:publish
 ```
 
 ## Authorizing Akceli in Continuous Integration (CI) Environments
-
-Once you have purchased an Akceli licence, you will be given an access token to a private repository that is configured for you.
-You will then use the access token to view the composer package. Make sure this is added before you 
 
 ::: tip
 Make Sure this is ran before you run composer install
