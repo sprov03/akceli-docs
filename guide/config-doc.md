@@ -21,8 +21,8 @@ if (env('APP_ENV') !== 'local') {
 ```
 
 ::: warning
-This set to prevent the Akceli from being active in production.  Do not remove this, you would not want 
-Akceli in a production application.  It requires terminal access to work but better safe then sorry.
+This set to prevent the Akceli Generators from being active in production.  Do not remove this, you would not want 
+Akceli Generators to be active in a production application.  It requires terminal access to work but better safe then sorry.
 :::
 
 
