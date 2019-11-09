@@ -49,7 +49,7 @@ composer config --auth http-basic.packages.akceli.io {Your Email} {Your Password
 
 ## Authorizing Akceli in Chipper CI
 
-I Chipper CI for all of my laravel projects.  To authorize Akceli with Chipper CI, simply add akceli to the packages for your project.
+I use Chipper CI for all of my laravel projects.  To authorize Akceli with Chipper CI, simply add akceli to the packages for your project.
 [https://chipperci.com/](https://chipperci.com/)
 
 * Repository Url: https://packages.akceli.io
