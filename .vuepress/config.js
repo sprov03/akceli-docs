@@ -5,7 +5,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/'},
       { text: 'Akceli', link: 'https://akceli.io'},
-      // { text: 'Login', link: 'https://app.akceli.io/login'},
+      { text: 'Login', link: 'https://app.akceli.io/login'},
     ],
     sidebar: {
       '/guide/': [
