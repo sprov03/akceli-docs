@@ -12,6 +12,7 @@ module.exports = {
         ['', 'Intro'],
         ['installation', 'Installation'],
         ['config-doc', 'Configuration'],
+        ['relationship-builder-doc', 'Relationship Builder'],
         ['generator-doc', 'Generators'],
         ['template-doc', 'Templates'],
         ['walk-through', 'Walk Through'],
