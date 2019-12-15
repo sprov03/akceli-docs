@@ -75,8 +75,8 @@ return [
 
     /**
      * This is where all the magic happens!!
-     * 
-     * To make a new command: php artisan akceli new-command
+     *
+     * To make a new command: php artisan akceli:generate new-command
      * It will register the command in the following list for you and build out the boiler plate of the command class.
      */
     'template-groups' => [
