@@ -4,6 +4,8 @@ Relationship builders allow you to simplify your migrations while following best
 for mysql relationships, and when you generate the models they will be populated with all
 of the relationships defined in the migration.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HmC9MjyZQl0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Belongs To
 
 ``` php

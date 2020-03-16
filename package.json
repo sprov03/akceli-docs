@@ -9,5 +9,8 @@
     "build": "vuepress build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.3.1"
+  }
 }
