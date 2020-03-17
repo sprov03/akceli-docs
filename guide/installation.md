@@ -26,7 +26,8 @@ Add the following to your `composer.json` to register the akceli repository
     ]
 ```
 
-require the package into your project: You will be prompted for username and password to authorize with the repository.
+require the package into your project: You will be prompted for username and password to authorize with the repository,
+it will be the username and password used to purchase the licence.
 
 ``` sh
 composer require akceli/laravel-code-generator
