@@ -14,7 +14,7 @@
         gtag('config', 'UA-151006134-2');
     </script>
     
-    <link rel="preload" href="/assets/css/0.styles.6c46cb95.css" as="style"><link rel="preload" href="/assets/js/app.5de1a042.js" as="script"><link rel="preload" href="/assets/js/2.9145ccee.js" as="script"><link rel="preload" href="/assets/js/7.aaa95987.js" as="script"><link rel="prefetch" href="/assets/js/10.4c8c2cba.js"><link rel="prefetch" href="/assets/js/11.4ebdcab7.js"><link rel="prefetch" href="/assets/js/12.721eb2a9.js"><link rel="prefetch" href="/assets/js/13.a67de9ed.js"><link rel="prefetch" href="/assets/js/14.276c756a.js"><link rel="prefetch" href="/assets/js/15.e30f84be.js"><link rel="prefetch" href="/assets/js/16.b9d82f05.js"><link rel="prefetch" href="/assets/js/3.98dd0a63.js"><link rel="prefetch" href="/assets/js/4.b2c0328d.js"><link rel="prefetch" href="/assets/js/5.23e23c6b.js"><link rel="prefetch" href="/assets/js/6.a2122880.js"><link rel="prefetch" href="/assets/js/8.8a61e4ba.js"><link rel="prefetch" href="/assets/js/9.2981f33c.js">
+    <link rel="preload" href="/assets/css/0.styles.6c46cb95.css" as="style"><link rel="preload" href="/assets/js/app.1ed186c0.js" as="script"><link rel="preload" href="/assets/js/2.9145ccee.js" as="script"><link rel="preload" href="/assets/js/7.75574fc0.js" as="script"><link rel="prefetch" href="/assets/js/10.09f5ee62.js"><link rel="prefetch" href="/assets/js/11.2223d9b7.js"><link rel="prefetch" href="/assets/js/12.b67604dd.js"><link rel="prefetch" href="/assets/js/13.abf7576c.js"><link rel="prefetch" href="/assets/js/14.ed64ebef.js"><link rel="prefetch" href="/assets/js/15.4738c544.js"><link rel="prefetch" href="/assets/js/16.b9d82f05.js"><link rel="prefetch" href="/assets/js/3.98dd0a63.js"><link rel="prefetch" href="/assets/js/4.b2c0328d.js"><link rel="prefetch" href="/assets/js/5.23e23c6b.js"><link rel="prefetch" href="/assets/js/6.a2122880.js"><link rel="prefetch" href="/assets/js/8.56b36378.js"><link rel="prefetch" href="/assets/js/9.12b96407.js">
     <link rel="stylesheet" href="/assets/css/0.styles.6c46cb95.css">
   </head>
   <body>
@@ -43,8 +43,10 @@
     <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </span></code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>This set to prevent the Akceli Generators from being active in production.  Do not remove this, you would not want
-Akceli Generators to be active in a production application.  It requires terminal access to work but better safe then sorry.</p></div> <h2 id="settings"><a href="#settings" class="header-anchor">#</a> Settings</h2> <div class="language-php extra-class"><pre class="language-php"><code>return [
-    /**
+Akceli Generators to be active in a production application.  It requires terminal access to work but better safe then sorry.</p></div> <h2 id="settings"><a href="#settings" class="header-anchor">#</a> Settings</h2> <div class="language-php extra-class"><pre class="language-php"><code><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">return</span> <span class="token punctuation">[</span>
+    <span class="token comment">/**
      * Model Directory
      *
      *      Akceli has two ways that it can find a file Model
@@ -60,10 +62,10 @@ Akceli Generators to be active in a production application.  It requires termina
      *          Note:  The possible failures of the second lookup is why Akceli models get generated with the $table property set.
      *                 If your app uses the Models directory, I suggest you set it here.  It will speed up the Model lookups.
      *                 To Insure that the model lookups always resolve correctly simply add the $table attribute to the models.
-     */
-    'model_directory' =&gt;  'Models',
+     */</span>
+    <span class="token single-quoted-string string">'model_directory'</span> <span class="token operator">=</span><span class="token operator">&gt;</span>  <span class="token single-quoted-string string">'Models'</span><span class="token punctuation">,</span>
 
-    /**
+    <span class="token comment">/**
      * Options: 'auto-complete' or 'multiple-choice'
      * will default to 'multiple-choice' if this is missing or set to an invalid option
      *
@@ -72,32 +74,32 @@ Akceli Generators to be active in a production application.  It requires termina
      *      of the template name and when it is selected just press enter.  When you do not know what your options are
      *      you can simply press enter with nothing selected and it will switch to multiple-choice selection allowing
      *      for you to see the full lis of templates you want.
-     */
-    'select-template-behavior' =&gt; 'auto-complete',
+     */</span>
+    <span class="token single-quoted-string string">'select-template-behavior'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token single-quoted-string string">'auto-complete'</span><span class="token punctuation">,</span>
 
-    /**
+    <span class="token comment">/**
      * tables that will be skipped when using the Generate All Generator
-     */
-    'all-generator-blacklist' =&gt; [
-        'failed_jobs',
-        'migrations',
-        'password_resets',
-    ],
+     */</span>
+    <span class="token single-quoted-string string">'all-generator-blacklist'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span>
+        <span class="token single-quoted-string string">'failed_jobs'</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'migrations'</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'password_resets'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
 
-    /**
+    <span class="token comment">/**
      * Generators that generate relationships
      *
      * If you have a generator that generates relationships, then add it here so that the all generator will flesh out the belongs to many
      * Relationships during the process, example models.  So all relationships are added to the models.
-     */
-    'generators_that_generate_relationships' =&gt; ['model'],
+     */</span>
+    <span class="token single-quoted-string string">'generators_that_generate_relationships'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token single-quoted-string string">'model'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 
-    /**
+    <span class="token comment">/**
      * This is for documenting what values you want to be show based on a given data type.
-     */
-    'column-settings' =&gt; [
-        /**
-         * Usage: <span class="token php language-php"><span class="token delimiter important">&lt;?=</span><span class="token variable">$column</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getColumnSetting</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'php_class_doc_type'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'string'</span><span class="token punctuation">)</span><span class="token delimiter important">?&gt;</span></span>
+     */</span>
+    <span class="token single-quoted-string string">'column-settings'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span>
+        <span class="token comment">/**
+         * Usage: &lt;?=$column-&gt;getColumnSetting('php_class_doc_type', 'string')?&gt;
          *
          * Outputs based on column analysis:
          *    Integer: 'integer'
@@ -105,11 +107,11 @@ Akceli Generators to be active in a production application.  It requires termina
          *    Enum: 'string'
          *    Timestamp: 'Carbon'
          *    Boolean: 'boolean'
-         */
-        'php_class_doc_type' =&gt; Akceli::columnSetting('string', 'integer', 'string', 'string', 'Carbon', 'boolean'),
+         */</span>
+        <span class="token single-quoted-string string">'php_class_doc_type'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> Akceli<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">columnSetting</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'string'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'integer'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'string'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'string'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'Carbon'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'boolean'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 
-        /**
-         * Usage: <span class="token php language-php"><span class="token delimiter important">&lt;?=</span><span class="token variable">$column</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getColumnSetting</span><span class="token punctuation">(</span><span class="token single-quoted-string string">'casts'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'string'</span><span class="token punctuation">)</span><span class="token delimiter important">?&gt;</span></span>
+        <span class="token comment">/**
+         * Usage: &lt;?=$column-&gt;getColumnSetting('casts', 'string')?&gt;
          *
          * Outputs based on column analysis:
          *    Integer: null
@@ -117,60 +119,60 @@ Akceli Generators to be active in a production application.  It requires termina
          *    Enum: null
          *    Timestamp: 'datetime'
          *    Boolean: 'boolean'
-         */
-        'casts' =&gt; Akceli::columnSetting(null, null, null, null, 'datetime', 'boolean'),
-    ],
+         */</span>
+        <span class="token single-quoted-string string">'casts'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> Akceli<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">columnSetting</span><span class="token punctuation">(</span><span class="token constant">null</span><span class="token punctuation">,</span> <span class="token constant">null</span><span class="token punctuation">,</span> <span class="token constant">null</span><span class="token punctuation">,</span> <span class="token constant">null</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'datetime'</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'boolean'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
 
-    /**
+    <span class="token comment">/**
      * This is where all the magic happens!!
      *
      * To create a new Generator: php artisan akceli:generate generator
      * It will register the Generator in the following list for you and build out the boiler plate of the Generator class.
-     */
-    'generators' =&gt; [
-        'generator' =&gt; DefaultNewAkceliGenerator::class,
-        'all' =&gt; AllGenerator::class,
-        'channel' =&gt; ChannelGenerator::class,
-        'command' =&gt; CommandGenerator::class,
-        'controller' =&gt; ControllerGenerator::class,
-        'event' =&gt; EventGenerator::class,
-        'exception' =&gt; ExceptionGenerator::class,
-        'factory' =&gt; FactoryGenerator::class,
-        'job' =&gt; JobGenerator::class,
-        'listener' =&gt; ListenerGenerator::class,
-        'mailable' =&gt; MailableGenerator::class,
-        'middleware' =&gt; MiddlewareGenerator::class,
-        'migration' =&gt; MigrationGenerator::class,
-        'model' =&gt; ModelGenerator::class,
-        'notification' =&gt; NotificationGenerator::class,
-        'observer' =&gt; ObserverGenerator::class,
-        'policy' =&gt; PolicyGenerator::class,
-        'provider' =&gt; ProviderGenerator::class,
-        'request' =&gt; RequestGenerator::class,
-        'resource' =&gt; ResourceGenerator::class,
-        'rule' =&gt; RuleGenerator::class,
-        'test' =&gt; TestGenerator::class,
-        'seeder' =&gt; SeederGenerator::class,
-        /** New Generators Get Inserted Here */
-    ],
+     */</span>
+    <span class="token single-quoted-string string">'generators'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span>
+        <span class="token single-quoted-string string">'generator'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> DefaultNewAkceliGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'all'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> AllGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'channel'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> ChannelGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'command'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> CommandGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'controller'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> ControllerGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'event'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> EventGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'exception'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> ExceptionGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'factory'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> FactoryGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'job'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> JobGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'listener'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> ListenerGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'mailable'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> MailableGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'middleware'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> MiddlewareGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'migration'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> MigrationGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'model'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> ModelGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'notification'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> NotificationGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'observer'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> ObserverGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'policy'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> PolicyGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'provider'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> ProviderGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'request'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> RequestGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'resource'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> ResourceGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'rule'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> RuleGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'test'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> TestGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'seeder'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> SeederGenerator<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token comment">/** New Generators Get Inserted Here */</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
 
-    /**
+    <span class="token comment">/**
      * This mapping is used to build relationships
      * Can be used to add custom relationship and build a Custom RelationshipBuilder
-     */
-    'relationships' =&gt; [
-        'belongsToMany' =&gt; BelongsToManyBuilder::class,
-        'belongsTo' =&gt; BelongsToBuilder::class,
-        'hasOne' =&gt; HasOneBuilder::class,
-        'hasMany' =&gt; HasManyBuilder::class,
-        'morphMany' =&gt; MorphManyBuilder::class,
-        'morphOne' =&gt; MorphOneBuilder::class,
-        'morphTo' =&gt; MorphToBuilder::class,
-//        'morphToMany' =&gt; MorphToManyBuilder::class,
-    ]
-];
+     */</span>
+    <span class="token single-quoted-string string">'relationships'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">[</span>
+        <span class="token single-quoted-string string">'belongsToMany'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> BelongsToManyBuilder<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'belongsTo'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> BelongsToBuilder<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'hasOne'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> HasOneBuilder<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'hasMany'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> HasManyBuilder<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'morphMany'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> MorphManyBuilder<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'morphOne'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> MorphOneBuilder<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        <span class="token single-quoted-string string">'morphTo'</span> <span class="token operator">=</span><span class="token operator">&gt;</span> MorphToBuilder<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+<span class="token comment">//        'morphToMany' =&gt; MorphToManyBuilder::class,</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+</span></code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/guide/installation.html" class="prev">
         Installation
@@ -179,6 +181,6 @@ Akceli Generators to be active in a production application.  It requires termina
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.5de1a042.js" defer></script><script src="/assets/js/2.9145ccee.js" defer></script><script src="/assets/js/7.aaa95987.js" defer></script>
+    <script src="/assets/js/app.1ed186c0.js" defer></script><script src="/assets/js/2.9145ccee.js" defer></script><script src="/assets/js/7.75574fc0.js" defer></script>
   </body>
 </html>
