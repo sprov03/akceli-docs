@@ -31,6 +31,8 @@ Akceli Generators to be active in a production application.  It requires termina
 ``` php
 <?php
 
+
+
 return [
     /**
      * Model Directory
