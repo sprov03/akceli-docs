@@ -51,8 +51,13 @@ This will setup everything that needs to be setup for Sanctum to work with a fre
 php artisan akceli:generate boostrap sanctum-api
 ```
 
-
-
+## Editor Issues
+If you are using php storm, you will need to ignore a few directories in order to not get the multiple deffintion warning that it will yell about.
+This is a flaw in PhpStrom Not fully following the same file completion that is sugested by the composer json autoloading.
+The boostraping will copy files into place when needed.  This is what PhpStorm dose not like when analyzing files, but this is
+not a problem with php, just the code analysis.
+* /vendor/akceli/laravel-code-generator/publishable
+* /akceli/bootstrap
 
 
 ## Authorizing Akceli in Continuous Integration (CI) Environments
