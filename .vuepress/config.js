@@ -1,4 +1,5 @@
 module.exports = {
+  dest: '../testing/output',
   title: 'Akceli',
   description: 'Akcelerate your Laravel development',
   themeConfig: {
